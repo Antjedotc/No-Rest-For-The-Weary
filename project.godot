@@ -15,6 +15,10 @@ run/main_scene="uid://dhj4732em81dx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+CyclopsAutoload="*uid://4siqre3jhe80"
+
 [display]
 
 window/size/viewport_width=1000
@@ -26,6 +30,10 @@ window/stretch/aspect="expand"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg")
 
 [input]
 
