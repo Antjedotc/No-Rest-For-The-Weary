@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bdow17166krgf"]
+
+[ext_resource type="PackedScene" uid="uid://dyghwkv4ktu3s" path="res://player.tscn" id="1_6vcgg"]
+[ext_resource type="Script" uid="uid://oke33v5xg8ax" path="res://dungeon_scene.gd" id="1_h1d5b"]
+
+[node name="DungeonScene" type="Node3D" unique_id=1961024069]
+script = ExtResource("1_h1d5b")
+
+[node name="PLAYER" parent="." unique_id=577949257 instance=ExtResource("1_6vcgg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.480094, 0)

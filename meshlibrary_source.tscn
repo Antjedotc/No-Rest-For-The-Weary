@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b58tp0xba13bf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fwwq8"]
+albedo_color = Color(0.21176471, 0.13333334, 0.06666667, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p76jy"]
+material = SubResource("StandardMaterial3D_fwwq8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p76jy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4kha"]
+albedo_color = Color(0.42724836, 0.41943845, 0.1937142, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqgv6"]
+material = SubResource("StandardMaterial3D_d4kha")
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqgv6"]
+size = Vector3(1, 0.2, 1)
+
+[node name="MeshlibrarySource" type="Node3D" unique_id=2127035853]
+
+[node name="wall" type="MeshInstance3D" parent="." unique_id=1201772765]
+mesh = SubResource("BoxMesh_p76jy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall" unique_id=122112437]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D" unique_id=1775682582]
+shape = SubResource("BoxShape3D_p76jy")
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1442976932]
+mesh = SubResource("BoxMesh_jqgv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=539506998]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=2140733258]
+shape = SubResource("BoxShape3D_jqgv6")

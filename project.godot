@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="NO REST FOR THE WEARY"
-run/main_scene="uid://dhj4732em81dx"
+run/main_scene="uid://c4ohol1t1u5np"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-CyclopsAutoload="*uid://4siqre3jhe80"
+Global="*uid://bm2pd1eryuwx6"
 
 [display]
 
@@ -30,10 +30,6 @@ window/stretch/aspect="expand"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg")
 
 [input]
 

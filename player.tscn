@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dyghwkv4ktu3s"]
+
+[ext_resource type="Script" uid="uid://hsb344sfeitg" path="res://camera_3d.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://80x6daxgsmxc" path="res://character_body_3d.gd" id="2_i3pqv"]
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 1
+background_color = Color(0.09746251, 0.10222667, 0.11851438, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.13007873, 0.13007873, 0.13007873, 1)
+ambient_light_energy = 9.18
+reflected_light_source = 2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_a202f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqgv6"]
+albedo_color = Color(0.35328493, 0.27081677, 0.18462029, 1)
+metallic = 0.39
+metallic_specular = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_p76jy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p76jy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wc5p8"]
+albedo_color = Color(0.65519804, 0.61259276, 0.4912917, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_p76jy"]
+
+[node name="PLAYER" type="Node3D" unique_id=577949257]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=158559933 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.7376388, 0.35560057, -0.5739663, 0, 0.8500742, 0.52666306, 0.6751956, -0.3884871, 0.62704766, -6.16, 5.169424, 6.710895)
+environment = SubResource("Environment_noarx")
+attributes = SubResource("CameraAttributesPractical_a202f")
+current = true
+script = ExtResource("1_onrkg")
+player = NodePath("../CharacterBody3D")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=383308112 node_paths=PackedStringArray("camera")]
+safe_margin = 0.01
+script = ExtResource("2_i3pqv")
+camera = NodePath("../Camera3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1961365026]
+material_override = SubResource("StandardMaterial3D_jqgv6")
+mesh = SubResource("CapsuleMesh_p76jy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=141093255]
+shape = SubResource("CapsuleShape3D_p76jy")
+debug_color = Color(0.7176471, 0.25490198, 0.8627451, 1)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1493046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43811655, -0.36919576)
+material_override = SubResource("StandardMaterial3D_wc5p8")
+mesh = SubResource("SphereMesh_p76jy")
