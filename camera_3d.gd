@@ -1,8 +1,8 @@
 extends Camera3D
 
 @export var player: Node3D
-const CAMERA_OFFSET_X = 3
-const CAMERA_OFFSET_Z = 3
+const CAMERA_OFFSET_X = -3
+const CAMERA_OFFSET_Z = -3
 const CAMERA_OFFSET_Y = 5
 var target_position
 

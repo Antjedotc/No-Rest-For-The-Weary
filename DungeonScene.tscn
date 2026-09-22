@@ -2,9 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://dyghwkv4ktu3s" path="res://player.tscn" id="1_6vcgg"]
 [ext_resource type="Script" uid="uid://oke33v5xg8ax" path="res://dungeon_scene.gd" id="1_h1d5b"]
+[ext_resource type="MeshLibrary" uid="uid://c88del5b7tjfy" path="res://floornwall.meshlib" id="3_84qoi"]
 
-[node name="DungeonScene" type="Node3D" unique_id=1961024069]
+[node name="DungeonScene" type="Node3D" unique_id=1961024069 node_paths=PackedStringArray("GridMapToEdit", "PlayerObject")]
 script = ExtResource("1_h1d5b")
+GridMapToEdit = NodePath("GridMap")
+PlayerObject = NodePath("PLAYER")
+width = 20
+height = 20
 
 [node name="PLAYER" parent="." unique_id=577949257 instance=ExtResource("1_6vcgg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.480094, 0)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=305063624]
+mesh_library = ExtResource("3_84qoi")
+cell_size = Vector3(1, 1, 1)

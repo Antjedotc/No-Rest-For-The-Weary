@@ -21,15 +21,7 @@ func goto_scene(path):
 	_deferred_goto_scene.call_deferred(path)
 	
 func _deferred_goto_scene(path):
-		#remove current scene
-	#current_scene.free()
-		#load new scene
-	#var s = ResourceLoader.load(path)
-		#instance the new scene
-	#current_scene = s.instantiate()
-		#add it to the tree as the active scene
-	#get_tree().root.add_child(current_scene)
-	#get_tree().current_scene = current_scene #don't worry about it.
+
 	get_tree().change_scene_to_file(path)
 	
 #generates a new dungeon floor
