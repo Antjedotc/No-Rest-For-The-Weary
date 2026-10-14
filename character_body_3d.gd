@@ -3,7 +3,13 @@ extends CharacterBody3D
 @export var camera: Camera3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4
+var myWorldMode: int = 0
 
+func _ready() -> void:
+	var rootnode = get_tree().current_scene as Node3D
+	if rootnode:
+		global_position = rootnode.playerStartsHere
+		myWorldMode = rootnode.get_meta("CameraMode", 0)
 
 func _physics_process(delta: float) -> void:
 	
@@ -12,8 +18,8 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	#	velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	var camera_basis := camera.global_transform.basis
@@ -39,3 +45,6 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
+	
+func die():
+	global_position = get_tree().current_scene.playerStartsHere

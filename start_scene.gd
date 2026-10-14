@@ -1,5 +1,7 @@
 extends Node3D
 
+@export var PlayerObject: Node3D
+var playerStartsHere: Vector3 = Vector3(0,0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +14,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	#Global.goto_scene("res://testy.tscn")
-	Global.make_new_floor()
+	if body.is_in_group("player_group"):
+		Global.make_new_floor()
+	

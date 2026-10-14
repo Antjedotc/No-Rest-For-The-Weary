@@ -2,15 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bp0t4bh4cpjai" path="res://start_scene.gd" id="1_50cbs"]
 [ext_resource type="PackedScene" uid="uid://dyghwkv4ktu3s" path="res://player.tscn" id="1_xtwlf"]
+[ext_resource type="PackedScene" uid="uid://i4buk2vc8qeo" path="res://killplane.tscn" id="3_2j6u4"]
+[ext_resource type="ArrayMesh" uid="uid://dpnka47ov0ptn" path="res://models/tree.obj" id="4_kds3s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtwlf"]
 albedo_color = Color(0.34509805, 0.3529412, 0.21176471, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_50cbs"]
-size = Vector2(10, 10)
+size = Vector2(20, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2j6u4"]
-size = Vector3(10, 0.2, 10)
+size = Vector3(20, 0.2, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_p76jy"]
 size = Vector3(2, 4, 1)
@@ -18,8 +20,10 @@ size = Vector3(2, 4, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_p76jy"]
 size = Vector3(2, 4, 1)
 
-[node name="StartScene" type="Node3D" unique_id=230780343]
+[node name="StartScene" type="Node3D" unique_id=230780343 node_paths=PackedStringArray("PlayerObject")]
 script = ExtResource("1_50cbs")
+PlayerObject = NodePath("PLAYER")
+metadata/CameraMode = 0
 
 [node name="PLAYER" parent="." unique_id=577949257 instance=ExtResource("1_xtwlf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.480094, 0)
@@ -44,5 +48,14 @@ mesh = SubResource("BoxMesh_p76jy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1747461099]
 shape = SubResource("BoxShape3D_p76jy")
+
+[node name="Killplane" parent="." unique_id=633597773 instance=ExtResource("3_2j6u4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.904071, 0)
+
+[node name="DECOR" type="Node3D" parent="." unique_id=1087571146]
+
+[node name="Tree" type="MeshInstance3D" parent="." unique_id=1474469834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2363825, -0.19490719, 5.853683)
+mesh = ExtResource("4_kds3s")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

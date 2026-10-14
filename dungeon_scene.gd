@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var GridMapToEdit: GridMap
-@export var PlayerObject: Node3D
+@export var PlayerObject: Pawn
 var grid: PackedInt32Array = PackedInt32Array()
 @export var width: int = 10
 @export var height: int = 10
@@ -12,6 +12,7 @@ var exitDoor: Vector3i = Vector3i(0,0,0) #IMPLEMENT ME
 func _ready() -> void:
 	make_floor()
 	PlayerObject.global_position = playerStartsHere
+	start_player_turn()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,19 +35,29 @@ func place_grid_in_world():
 
 #LETS WRITE SOME FUN ALGO RITHMGS
 func generate_layout():
-	var critter: Vector2i = Vector2i(width/2, height/2)
-	for i in range(100):
-		grid_set_cell(critter.x, critter.y, 1)
-		var dir = randi() % 4
-		var tomove = Vector2i(0,0)
-		if(dir == 0): tomove = Vector2i(1,0)
-		elif(dir == 1): tomove = Vector2i(0, -1)
-		elif(dir == 2): tomove = Vector2i(-1, 0)
-		else: tomove = Vector2i(0, 1)
-		critter = critter + tomove
-	#for y in range(height):
-	#	for x in range(width):
-	#		grid_set_cell(x, y, randi() % 2)
+	for y in range(height):
+		for x in range(width):
+			grid_set_cell(x, y, randi() % 2)
+
+#---TURN SYSTEM-------------------------------------
+
+enum State { PLAYER_TURN, NPC_TURN }
+var current_state: State = State.PLAYER_TURN
+
+func start_player_turn() -> void:
+	current_state = State.PLAYER_TURN
+	PlayerObject.take_turn()
+	
+
+func _on_player_pawn_action_completed() -> void:
+	print("yor done")
+	start_npc_turns()
+	
+func start_npc_turns() -> void:
+	current_state = State.NPC_TURN
+	print("This is where any NPCs would take their turns")
+	start_player_turn()
+
 
 #---HELPERS-----------------------------------------
 

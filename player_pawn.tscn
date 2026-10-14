@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1egpwmjqmgj0"]
+
+[ext_resource type="Script" uid="uid://cchqn20bxr1ec" path="res://Grid/walker.gd" id="1_f52xy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_prw06"]
+albedo_color = Color(0.35328493, 0.27081677, 0.18462029, 1)
+metallic = 0.39
+metallic_specular = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vlrtn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o17n"]
+albedo_color = Color(0.65519804, 0.61259276, 0.4912917, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fth4l"]
+
+[node name="PlayerPawn" type="Node3D" unique_id=2039934799]
+script = ExtResource("1_f52xy")
+metadata/_custom_type_script = "uid://cchqn20bxr1ec"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=758567617]
+material_override = SubResource("StandardMaterial3D_prw06")
+mesh = SubResource("CapsuleMesh_vlrtn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1502250081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43811655, -0.36919576)
+material_override = SubResource("StandardMaterial3D_1o17n")
+mesh = SubResource("SphereMesh_fth4l")
