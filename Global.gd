@@ -10,11 +10,6 @@ func _ready() -> void:
 	#so the current scene will be last always
 	current_scene = root.get_child(-1)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func goto_scene(path):
 	#using Object.call_deferred means the function will only be called 
 	#once all the code from the current scene is done running

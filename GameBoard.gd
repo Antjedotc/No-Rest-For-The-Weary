@@ -1,3 +1,4 @@
+## LISTEN. ONLY grid.gd should call ANY of these functions.
 class_name GameBoard
 extends Node
 

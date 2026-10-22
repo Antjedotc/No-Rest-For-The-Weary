@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwg5wvfu0rj30"]
+
+[ext_resource type="Texture2D" uid="uid://c5sad278kd1sa" path="res://Foliage Sample Pack/Textures/Grassy Vegetation1.png" id="1_ryuls"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ryuls")

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bdow17166krgf"]
+
+[ext_resource type="Script" uid="uid://oke33v5xg8ax" path="res://dungeon_scene.gd" id="1_h1d5b"]
+[ext_resource type="Script" uid="uid://hsb344sfeitg" path="res://camera_3d.gd" id="2_31ax5"]
+[ext_resource type="Script" uid="uid://gthiru66dx5n" path="res://GameBoard.gd" id="2_xuaqi"]
+[ext_resource type="PackedScene" uid="uid://i4buk2vc8qeo" path="res://killplane.tscn" id="4_1e4i0"]
+[ext_resource type="Script" uid="uid://dj83wok8e53d0" path="res://Grid/grid.gd" id="4_7p6pe"]
+[ext_resource type="MeshLibrary" uid="uid://cqr7s7yqqi4x3" path="res://2floorswall.meshlib" id="4_xuaqi"]
+[ext_resource type="PackedScene" uid="uid://d1egpwmjqmgj0" path="res://player_pawn.tscn" id="5_7p6pe"]
+[ext_resource type="Script" uid="uid://blhe57vlr0iog" path="res://Grid/playerpawn.gd" id="5_xuaqi"]
+
+[sub_resource type="Environment" id="Environment_o14n3"]
+background_mode = 1
+background_color = Color(0.09746251, 0.10222667, 0.11851438, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.13007873, 0.13007873, 0.13007873, 1)
+ambient_light_energy = 9.18
+reflected_light_source = 2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_8756c"]
+
+[node name="DungeonScene" type="Node3D" unique_id=1961024069 node_paths=PackedStringArray("GridMapToEdit", "PlayerObject") groups=["root_node"]]
+script = ExtResource("1_h1d5b")
+GridMapToEdit = NodePath("GridMap")
+PlayerObject = NodePath("GridMap/PlayerPawn")
+width = 20
+height = 20
+metadata/CameraMode = 1
+
+[node name="gameboard_manager" type="Node" parent="." unique_id=2063421173]
+script = ExtResource("2_xuaqi")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1765696604 node_paths=PackedStringArray("player")]
+transform = Transform3D(0.7376388, 0.3556006, -0.5739663, 0, 0.8500742, 0.52666306, 0.6751956, -0.38848707, 0.62704766, -6.16, 5.169424, 6.710895)
+environment = SubResource("Environment_o14n3")
+attributes = SubResource("CameraAttributesPractical_8756c")
+current = true
+script = ExtResource("2_31ax5")
+player = NodePath("../GridMap/PlayerPawn")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=305063624 node_paths=PackedStringArray("gameboard")]
+mesh_library = ExtResource("4_xuaqi")
+cell_size = Vector3(1, 1, 1)
+script = ExtResource("4_7p6pe")
+gameboard = NodePath("../gameboard_manager")
+
+[node name="PlayerPawn" parent="GridMap" unique_id=2039934799 instance=ExtResource("5_7p6pe")]
+script = ExtResource("5_xuaqi")
+
+[node name="Killplane" parent="." unique_id=633597773 instance=ExtResource("4_1e4i0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.9424973, 0)
+
+[connection signal="action_completed" from="GridMap/PlayerPawn" to="." method="_on_player_pawn_action_completed"]

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c3fqyphfhi8jg"]
+
+[ext_resource type="Texture2D" uid="uid://dlxclw1f8i0vx" path="res://Foliage Sample Pack/Textures/Forage1.png" id="1_0l444"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_0l444")
+roughness = 0.94

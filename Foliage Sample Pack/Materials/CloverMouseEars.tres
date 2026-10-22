@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhk54wuwqckon"]
+
+[ext_resource type="Texture2D" uid="uid://djxyy88vdendp" path="res://Foliage Sample Pack/Textures/Clover Mouse Ears.png" id="1_ymjvv"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ymjvv")

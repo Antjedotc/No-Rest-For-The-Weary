@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cc5c6eg8b7twy"]
+
+[ext_resource type="Texture2D" uid="uid://d2cru32871258" path="res://MyStuff/Textures/housewall.png" id="1_xylxb"]
+
+[resource]
+albedo_color = Color(0.759443, 0.6170416, 0.514632, 1)
+albedo_texture = ExtResource("1_xylxb")
+uv1_triplanar = true

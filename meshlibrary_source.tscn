@@ -8,14 +8,21 @@ material = SubResource("StandardMaterial3D_fwwq8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p76jy"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d4kha"]
-albedo_color = Color(0.42724836, 0.41943845, 0.1937142, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf6qo"]
+albedo_color = Color(0.5367421, 0.5009511, 0.5077283, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jqgv6"]
-material = SubResource("StandardMaterial3D_d4kha")
+[sub_resource type="BoxMesh" id="BoxMesh_my1vk"]
+material = SubResource("StandardMaterial3D_rf6qo")
 size = Vector3(1, 0.2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jqgv6"]
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5wh7"]
+albedo_color = Color(0.5168543, 0.45655274, 0.4043152, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqgv6"]
+material = SubResource("StandardMaterial3D_i5wh7")
 size = Vector3(1, 0.2, 1)
 
 [node name="MeshlibrarySource" type="Node3D" unique_id=2127035853]
@@ -29,9 +36,19 @@ mesh = SubResource("BoxMesh_p76jy")
 shape = SubResource("BoxShape3D_p76jy")
 
 [node name="floor" type="MeshInstance3D" parent="." unique_id=1442976932]
-mesh = SubResource("BoxMesh_jqgv6")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+mesh = SubResource("BoxMesh_my1vk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=539506998]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=2140733258]
+shape = SubResource("BoxShape3D_jqgv6")
+
+[node name="floor2" type="MeshInstance3D" parent="." unique_id=1299726044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+mesh = SubResource("BoxMesh_jqgv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor2" unique_id=162272821]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor2/StaticBody3D" unique_id=177263350]
 shape = SubResource("BoxShape3D_jqgv6")

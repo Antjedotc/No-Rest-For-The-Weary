@@ -8,8 +8,11 @@ enum CellType {
 	OBSTACLE,
 	OBJECT,
 }
+signal died(pawn: Pawn)
 @onready var grid : Grid = get_parent()
 var grid_size: float
+var MaxHealth: int = 10
+var CurrentHealth: int = 10
 
 @export var type := CellType.ACTOR
 
@@ -28,3 +31,19 @@ func set_active(value: bool) -> void:
 	
 func take_turn() -> void:
 	pass
+	
+## subtracts damage from CurrentHealth.
+## negative values heal.
+## TO IMPLEMENT: damage types, DEATH
+func apply_damage(damage: int) -> void:
+	CurrentHealth = CurrentHealth - damage
+	if not CurrentHealth > 0:
+		die()
+
+func die():
+	if is_queued_for_deletion():
+		return
+	set_process(false)
+	died.emit(self)
+	print("fuck i'm DEAD!!!!!!!!!!!!")
+	queue_free()

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hsb344sfeitg" path="res://camera_3d.gd" id="1_onrkg"]
 [ext_resource type="Script" uid="uid://80x6daxgsmxc" path="res://character_body_3d.gd" id="2_onrkg"]
-[ext_resource type="ArrayMesh" uid="uid://cvsb54sn7r328" path="res://models/saturday.obj" id="3_i3pqv"]
+[ext_resource type="ArrayMesh" uid="uid://cvsb54sn7r328" path="res://MyStuff/models/saturday.obj" id="3_i3pqv"]
 
 [sub_resource type="Environment" id="Environment_noarx"]
 background_mode = 1
@@ -31,10 +31,10 @@ safe_margin = 0.01
 script = ExtResource("2_onrkg")
 camera = NodePath("../Camera3D")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1800329433]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.85723805, 0)
-mesh = ExtResource("3_i3pqv")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=141093255]
 shape = SubResource("CapsuleShape3D_p76jy")
 debug_color = Color(0.7176471, 0.25490198, 0.8627451, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=786450776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7519188, 0)
+mesh = ExtResource("3_i3pqv")

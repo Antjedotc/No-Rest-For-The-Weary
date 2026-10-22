@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cl2j45fdq0uqp"]
+
+[ext_resource type="Script" uid="uid://ctn6r6ys3b8fd" path="res://Grid/NPCpawn.gd" id="1_ua2rk"]
+[ext_resource type="ArrayMesh" uid="uid://wbxsisojjjrl" path="res://MyStuff/models/bug.obj" id="2_a21c4"]
+[ext_resource type="Material" uid="uid://dw8kni51br60f" path="res://Foliage Sample Pack/Materials/Bark.tres" id="3_ofrva"]
+[ext_resource type="Material" uid="uid://bk6bcovmm180j" path="res://MyStuff/Materials/oldmetal.tres" id="4_vv6db"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76jy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Enemypawn" type="Node3D" unique_id=325968766]
+script = ExtResource("1_ua2rk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1252831017]
+mesh = ExtResource("2_a21c4")
+surface_material_override/0 = ExtResource("3_ofrva")
+surface_material_override/1 = ExtResource("4_vv6db")
+surface_material_override/2 = SubResource("StandardMaterial3D_p76jy")
+surface_material_override/3 = SubResource("StandardMaterial3D_p76jy")
+surface_material_override/4 = SubResource("StandardMaterial3D_p76jy")
+surface_material_override/5 = SubResource("StandardMaterial3D_p76jy")

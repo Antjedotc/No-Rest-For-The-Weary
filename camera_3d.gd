@@ -4,7 +4,7 @@ extends Camera3D
 var target_position: Vector3 = Vector3(0, 0, 0)
 
 const CAMERA_OFFSET: Array[Vector3] = [Vector3(-2.5, 2, -2.5), 
-		Vector3(0, 8, 5)]
+		Vector3(0, 5, 1)]
 
 var myCameraMode: int = 0
 
@@ -16,7 +16,7 @@ func _ready() -> void:
 		myCameraMode = rootnode.get_meta("CameraMode", 0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player:
 		global_position = player.global_position + CAMERA_OFFSET[myCameraMode]
 		target_position = player.global_position

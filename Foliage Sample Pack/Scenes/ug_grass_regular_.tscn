@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://dxonjjv1wbos7"]
+
+[ext_resource type="Material" path="res://Foliage Sample Pack/Materials/GrassyVegetation.tres" id="1_s4eyv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmra8"]
+resource_name = "Grassy Vegetation1"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nmidj"]
+_surfaces = [{
+"aabb": AABB(-0.0017607412, -0.0016357405, -0.00046485514, 0.0036508362, 0.0035996279, 0.0066867736),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABwAEAAYACAAJAAoACwAIAAoADAANAA4ADwAMAA4AEAARABIAEwAQABIAFAAVABYAFwAUABYA"),
+"lods": [0.0020986632, PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABwAEAAYA")],
+"name": "Grassy Vegetation1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("rMjmunM5xrBIg6c7rMjmui/0ti6xm5q581jOOi/0ti6xm5q5+66vOnrkobg84cs7miO/un+cWzpj0JM7ACW0OpqIT7pJg6c7BiW0OoWIT7qsm5q5uJTMuoOITzqxm5q5LP/LOgUtqLjK5hI7Xxm2Oq6vV7oinBw4UnCauuNAozrNt/O5HxJlupC0ADvB+uM6A/TNuuahkLoB+OA6mH3Jumm4prk9I8e5NkXoOil9AbmNWH23aRbOOnboYLoAdw87CIfjujY0grnwIAk7O1jJuiPe/jkhbeq4BjLAOmZEeboK/aa518xhOlhm1rp78OI6D733OvaTZjo/P9k6wD7POl1JDjm/V525O37kundnqTmcXOm4cZjOuuSuizp0KQk7")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ivmfj"]
+resource_name = "Grassy Vegetation1"
+_surfaces = [{
+"aabb": AABB(-0.0017607412, -0.0016357405, -0.00046485514, 0.0036508362, 0.0035996279, 0.0066867736),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAAAAKmsKPyLBqj4qawo/IsGqPgAAAAAiwao+AAAAAAAAAAAAAAAAAAAAACprCj8iwao+KmsKPwAAAAAAAAAAAAAAACprCj8iwao+KmsKPyLBqj4AAAAAAAAAAAAAAAAAAAAAKmsKPyLBqj4qawo/IsGqPgAAAAAAAAAAAAAAAAAAAAAqawo/IsGqPiprCj8iwao+AAAAAAAAAAAAAAAAAAAAACprCj8iwao+KmsKPyLBqj4AAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABwAEAAYACAAJAAoACwAIAAoADAANAA4ADwAMAA4AEAARABIAEwAQABIAFAAVABYAFwAUABYA"),
+"lods": [0.0020986632, PackedByteArray("AAABAAIAAwAAAAIABAAFAAYABwAEAAYA")],
+"material": SubResource("StandardMaterial3D_bmra8"),
+"name": "Grassy Vegetation1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("rMjmunM5xrBIg6c7rMjmui/0ti6xm5q581jOOi/0ti6xm5q5+66vOnrkobg84cs7miO/un+cWzpj0JM7ACW0OpqIT7pJg6c7BiW0OoWIT7qsm5q5uJTMuoOITzqxm5q5LP/LOgUtqLjK5hI7Xxm2Oq6vV7oinBw4UnCauuNAozrNt/O5HxJlupC0ADvB+uM6A/TNuuahkLoB+OA6mH3Jumm4prk9I8e5NkXoOil9AbmNWH23aRbOOnboYLoAdw87CIfjujY0grnwIAk7O1jJuiPe/jkhbeq4BjLAOmZEeboK/aa518xhOlhm1rp78OI6D733OvaTZjo/P9k6wD7POl1JDjm/V525O37kundnqTmcXOm4cZjOuuSuizp0KQk7V33/f1D9AkAnff9/AAAAgIuC/3/s/MdC/4Hif/X8f0LNfUSBLyz1KA+Cz37cLwvXM4K6fiEu4imDfUKBHyzlKGyC3n8qOp4jNYKtfic61yMYfv2BbjlMIqF+CoOVOR8ii31Lfin2TTyFfX5/nfZ/PNaC0H9A9046b4Ktfqj2PTpMfZ1/4NS0VIp9yIA91WhUW4J7frLUslZXgXZ99dPpVu6CWoFRCbY8joIzgBsJpzw2fYGAYwZ2O5F9ooEyBrA7")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nmidj")
+
+[node name="UG_Grass_Regular_" type="Node3D" unique_id=1550911221]
+
+[node name="UG Grass Regular " type="MeshInstance3D" parent="." unique_id=1498105727]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+material_override = ExtResource("1_s4eyv")
+mesh = SubResource("ArrayMesh_ivmfj")
+skeleton = NodePath("")

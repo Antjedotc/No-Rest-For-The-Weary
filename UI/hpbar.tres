@@ -1,0 +1,39 @@
+[gd_resource type="Theme" format=3 uid="uid://h0wdw44lhb1q"]
+
+[ext_resource type="FontFile" uid="uid://bh567nysl3v6d" path="res://UI/CallingCode-Regular.otf" id="1_a1o4a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wle5a"]
+bg_color = Color(0.22743383, 0.3355592, 0.31551558, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt4y1"]
+bg_color = Color(0.52104104, 0.6090216, 0.58874434, 1)
+border_width_left = 3
+border_width_top = 5
+border_width_right = 3
+border_width_bottom = 5
+border_color = Color(0.20466906, 0.31367618, 0.4098316, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uilie"]
+bg_color = Color(0.7669164, 0.41088572, 0.31180224, 1)
+border_width_left = 2
+border_width_top = 6
+border_width_bottom = 6
+border_color = Color(0.6863027, 0.17292738, 0.16605878, 1)
+border_blend = true
+
+[resource]
+default_font = ExtResource("1_a1o4a")
+HBoxContainer/constants/separation = 4
+Label/colors/font_color = Color(0.18039216, 1, 0.7607843, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_wle5a")
+MarginContainer/styles/stylebox = null
+ProgressBar/colors/font_color = Color(0.9764706, 1, 1, 1)
+ProgressBar/font_sizes/font_size = 30
+ProgressBar/fonts/font = ExtResource("1_a1o4a")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_rt4y1")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_uilie")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://blrxfqfr13me8"]
+
+[ext_resource type="Texture2D" uid="uid://dvmat81f2s5b7" path="res://Foliage Sample Pack/Textures/Plant1.png" id="1_ppstv"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_ppstv")

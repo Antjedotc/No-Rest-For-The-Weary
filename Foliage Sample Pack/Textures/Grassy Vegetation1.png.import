@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0oq4e3eyjiea"
-path.s3tc="res://.godot/imported/texture.png-0fc5fbb9aadfc4530cb9dbc77528bc2b.s3tc.ctex"
+uid="uid://c5sad278kd1sa"
+path.s3tc="res://.godot/imported/Grassy Vegetation1.png-acbc603c4b206ff2826eda95150ea68d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/texture.png"
-dest_files=["res://.godot/imported/texture.png-0fc5fbb9aadfc4530cb9dbc77528bc2b.s3tc.ctex"]
+source_file="res://Foliage Sample Pack/Textures/Grassy Vegetation1.png"
+dest_files=["res://.godot/imported/Grassy Vegetation1.png-acbc603c4b206ff2826eda95150ea68d.s3tc.ctex"]
 
 [params]
 

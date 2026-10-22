@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bifhqroikstwg"]
+
+[ext_resource type="Texture2D" uid="uid://c6le1rv2485bq" path="res://Foliage Sample Pack/Textures/Plant JelloBush.png" id="1_lkogb"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_lkogb")

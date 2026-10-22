@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bljeysonwpyh0"]
+
+[ext_resource type="ArrayMesh" uid="uid://dx0x0jigbdiwn" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Archway.obj" id="1_xld67"]
+[ext_resource type="Material" uid="uid://br3xq37gcr5q" path="res://MyStuff/Materials/wall.tres" id="2_3vwb8"]
+[ext_resource type="ArrayMesh" uid="uid://bngsao7gjdvtw" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Gazebo.obj" id="2_ckp56"]
+[ext_resource type="ArrayMesh" uid="uid://drnkdbfpdyn1w" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway1.obj" id="3_3vwb8"]
+[ext_resource type="ArrayMesh" uid="uid://cwxvkwfkwil13" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway2.obj" id="4_gh5vb"]
+[ext_resource type="Material" uid="uid://dlutmdt45764s" path="res://MyStuff/Materials/steelfloor.tres" id="4_wwh2h"]
+[ext_resource type="ArrayMesh" uid="uid://du37pna8rb5b2" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway3.obj" id="5_wwh2h"]
+[ext_resource type="ArrayMesh" uid="uid://cwbf4yricpj8h" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway4.obj" id="6_mgae3"]
+[ext_resource type="ArrayMesh" uid="uid://d376b3u5o84qm" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway5.obj" id="7_r1ukw"]
+[ext_resource type="ArrayMesh" uid="uid://dvt4tpsh4o6k7" path="res://Grid/Meshes/MeshLibrary v2 OBJs/Wall1.obj" id="8_eabsn"]
+[ext_resource type="ArrayMesh" uid="uid://836ath1advd" path="res://Grid/Meshes/MeshLibrary v2 OBJs/floor.obj" id="9_1qt2h"]
+
+[node name="MeshLibraryV2" type="Node3D" unique_id=1561705146]
+
+[node name="Wall1" type="MeshInstance3D" parent="." unique_id=377977594]
+mesh = ExtResource("8_eabsn")
+surface_material_override/0 = ExtResource("2_3vwb8")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1491288850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+mesh = ExtResource("9_1qt2h")
+surface_material_override/0 = ExtResource("4_wwh2h")
+
+[node name="Gazebo" type="MeshInstance3D" parent="." unique_id=776547509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+mesh = ExtResource("2_ckp56")
+surface_material_override/0 = ExtResource("4_wwh2h")
+surface_material_override/1 = ExtResource("2_3vwb8")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("2_3vwb8")
+surface_material_override/4 = ExtResource("2_3vwb8")
+surface_material_override/5 = ExtResource("2_3vwb8")
+surface_material_override/6 = ExtResource("2_3vwb8")
+surface_material_override/7 = ExtResource("2_3vwb8")
+surface_material_override/8 = ExtResource("2_3vwb8")
+
+[node name="Hallway1" type="MeshInstance3D" parent="." unique_id=381830766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("3_3vwb8")
+surface_material_override/0 = ExtResource("2_3vwb8")
+surface_material_override/1 = ExtResource("4_wwh2h")
+surface_material_override/2 = ExtResource("2_3vwb8")
+
+[node name="Hallway2" type="MeshInstance3D" parent="." unique_id=2144171635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = ExtResource("4_gh5vb")
+surface_material_override/0 = ExtResource("2_3vwb8")
+surface_material_override/1 = ExtResource("4_wwh2h")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("2_3vwb8")
+
+[node name="Hallway3" type="MeshInstance3D" parent="." unique_id=868527650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+mesh = ExtResource("5_wwh2h")
+surface_material_override/0 = ExtResource("2_3vwb8")
+surface_material_override/1 = ExtResource("4_wwh2h")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("2_3vwb8")
+
+[node name="Hallway4" type="MeshInstance3D" parent="." unique_id=84296160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+mesh = ExtResource("6_mgae3")
+surface_material_override/0 = ExtResource("4_wwh2h")
+surface_material_override/1 = ExtResource("2_3vwb8")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("2_3vwb8")
+surface_material_override/4 = ExtResource("2_3vwb8")
+
+[node name="Hallway5" type="MeshInstance3D" parent="." unique_id=1647256270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+mesh = ExtResource("7_r1ukw")
+surface_material_override/0 = ExtResource("2_3vwb8")
+surface_material_override/1 = ExtResource("4_wwh2h")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("2_3vwb8")
+
+[node name="Archway" type="MeshInstance3D" parent="." unique_id=441147819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+mesh = ExtResource("1_xld67")
+surface_material_override/0 = ExtResource("2_3vwb8")
+surface_material_override/1 = ExtResource("2_3vwb8")
+surface_material_override/2 = ExtResource("2_3vwb8")
+surface_material_override/3 = ExtResource("4_wwh2h")

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drnkdbfpdyn1w"
+path="res://.godot/imported/Hallway1.obj-4a5559b6dff067f4913941dab727ea6c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hallway1.obj-4a5559b6dff067f4913941dab727ea6c.mesh"]
+
+source_file="res://Grid/Meshes/MeshLibrary v2 OBJs/Hallway1.obj"
+dest_files=["res://.godot/imported/Hallway1.obj-4a5559b6dff067f4913941dab727ea6c.mesh", "res://.godot/imported/Hallway1.obj-4a5559b6dff067f4913941dab727ea6c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

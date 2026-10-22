@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dlutmdt45764s"]
+
+[ext_resource type="Texture2D" uid="uid://djses8wkkvtqm" path="res://MyStuff/Textures/steelfloor.png" id="1_6o8g4"]
+
+[resource]
+albedo_texture = ExtResource("1_6o8g4")
+roughness = 0.69
+uv1_scale = Vector3(1.5, 1.5, 1.5)
+uv1_triplanar = true
